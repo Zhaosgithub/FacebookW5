@@ -14,6 +14,10 @@
 		E99A80ED1D16626C00BED6E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99A80EB1D16626C00BED6E4 /* LaunchScreen.storyboard */; };
 		E99A80F81D16626C00BED6E4 /* FacebookW5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A80F71D16626C00BED6E4 /* FacebookW5Tests.swift */; };
 		E99A81031D16626C00BED6E4 /* FacebookW5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A81021D16626C00BED6E4 /* FacebookW5UITests.swift */; };
+		E99A81111D1662F000BED6E4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A81101D1662F000BED6E4 /* FeedViewController.swift */; };
+		E99A81131D16633300BED6E4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A81121D16633300BED6E4 /* PhotoViewController.swift */; };
+		E99A81161D16722400BED6E4 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A81141D16722400BED6E4 /* BaseTransition.swift */; };
+		E99A81171D16722400BED6E4 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A81151D16722400BED6E4 /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		E99A80FE1D16626C00BED6E4 /* FacebookW5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookW5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99A81021D16626C00BED6E4 /* FacebookW5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookW5UITests.swift; sourceTree = "<group>"; };
 		E99A81041D16626C00BED6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E99A81101D1662F000BED6E4 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E99A81121D16633300BED6E4 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		E99A81141D16722400BED6E4 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		E99A81151D16722400BED6E4 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				E99A80E21D16626C00BED6E4 /* AppDelegate.swift */,
 				E99A80E41D16626C00BED6E4 /* ViewController.swift */,
 				E99A80E61D16626C00BED6E4 /* Main.storyboard */,
+				E99A81121D16633300BED6E4 /* PhotoViewController.swift */,
+				E99A81101D1662F000BED6E4 /* FeedViewController.swift */,
+				E99A81141D16722400BED6E4 /* BaseTransition.swift */,
+				E99A81151D16722400BED6E4 /* FadeTransition.swift */,
 				E99A80E91D16626C00BED6E4 /* Assets.xcassets */,
 				E99A80EB1D16626C00BED6E4 /* LaunchScreen.storyboard */,
 				E99A80EE1D16626C00BED6E4 /* Info.plist */,
@@ -257,6 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99A80E51D16626C00BED6E4 /* ViewController.swift in Sources */,
+				E99A81161D16722400BED6E4 /* BaseTransition.swift in Sources */,
+				E99A81131D16633300BED6E4 /* PhotoViewController.swift in Sources */,
+				E99A81111D1662F000BED6E4 /* FeedViewController.swift in Sources */,
+				E99A81171D16722400BED6E4 /* FadeTransition.swift in Sources */,
 				E99A80E31D16626C00BED6E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
