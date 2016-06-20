@@ -88,7 +88,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WZO-Qw-Znc">
-                                        <rect key="frame" x="0.0" y="54" width="315" height="462"/>
+                                        <rect key="frame" x="0.0" y="54" width="320" height="462"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>

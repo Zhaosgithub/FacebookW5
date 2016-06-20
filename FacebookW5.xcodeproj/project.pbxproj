@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E991E4BE1D17A56800CC6F81 /* LightboxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E4BD1D17A56800CC6F81 /* LightboxTransition.swift */; };
+		E991E4C01D17B14C00CC6F81 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E4BF1D17B14C00CC6F81 /* ImageTransition.swift */; };
 		E99A80E31D16626C00BED6E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A80E21D16626C00BED6E4 /* AppDelegate.swift */; };
 		E99A80E51D16626C00BED6E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A80E41D16626C00BED6E4 /* ViewController.swift */; };
 		E99A80E81D16626C00BED6E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E99A80E61D16626C00BED6E4 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E991E4BD1D17A56800CC6F81 /* LightboxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightboxTransition.swift; sourceTree = "<group>"; };
+		E991E4BF1D17B14C00CC6F81 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 		E99A80DF1D16626C00BED6E4 /* FacebookW5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookW5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99A80E21D16626C00BED6E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99A80E41D16626C00BED6E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				E99A81101D1662F000BED6E4 /* FeedViewController.swift */,
 				E99A81141D16722400BED6E4 /* BaseTransition.swift */,
 				E99A81151D16722400BED6E4 /* FadeTransition.swift */,
+				E991E4BF1D17B14C00CC6F81 /* ImageTransition.swift */,
+				E991E4BD1D17A56800CC6F81 /* LightboxTransition.swift */,
 				E99A80E91D16626C00BED6E4 /* Assets.xcassets */,
 				E99A80EB1D16626C00BED6E4 /* LaunchScreen.storyboard */,
 				E99A80EE1D16626C00BED6E4 /* Info.plist */,
@@ -269,10 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99A80E51D16626C00BED6E4 /* ViewController.swift in Sources */,
+				E991E4BE1D17A56800CC6F81 /* LightboxTransition.swift in Sources */,
 				E99A81161D16722400BED6E4 /* BaseTransition.swift in Sources */,
 				E99A81131D16633300BED6E4 /* PhotoViewController.swift in Sources */,
 				E99A81111D1662F000BED6E4 /* FeedViewController.swift in Sources */,
 				E99A81171D16722400BED6E4 /* FadeTransition.swift in Sources */,
+				E991E4C01D17B14C00CC6F81 /* ImageTransition.swift in Sources */,
 				E99A80E31D16626C00BED6E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +506,7 @@
 				E99A81091D16626C00BED6E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E99A810A1D16626C00BED6E4 /* Build configuration list for PBXNativeTarget "FacebookW5Tests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +515,7 @@
 				E99A810C1D16626C00BED6E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E99A810D1D16626C00BED6E4 /* Build configuration list for PBXNativeTarget "FacebookW5UITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +524,7 @@
 				E99A810F1D16626C00BED6E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
