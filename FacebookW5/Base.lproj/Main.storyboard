@@ -87,16 +87,18 @@
                                             <action selector="didTapDone:" destination="JVG-c9-iHs" eventType="touchUpInside" id="azV-Dm-6B3"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WZO-Qw-Znc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedding1" id="WZO-Qw-Znc">
                                         <rect key="frame" x="0.0" y="54" width="320" height="462"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="DoneButton" destination="I6j-XK-x9M" id="c15-ZY-fhm"/>
+                        <outlet property="TabBar" destination="Smn-JE-GFg" id="WG8-hI-zA6"/>
                         <outlet property="imageView" destination="WZO-Qw-Znc" id="uxH-hj-f8f"/>
                         <outlet property="scrollView" destination="57B-c5-r6H" id="6g7-wr-hBd"/>
                     </connections>

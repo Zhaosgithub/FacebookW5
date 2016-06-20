@@ -8,19 +8,30 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
-   
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var DoneButton: UIButton!
+    @IBOutlet weak var TabBar: UIImageView!
     
     var image: UIImage!
+//    var contentOffset: CGFloat
+    
+    
+//    var animalImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
       imageView.image = image
         
+//        imageView.image = animalImage
+        
+     scrollView.contentSize = CGSize(width: 320, height: 800)
+     scrollView.delegate = self
+        
+//     contentOffset = 100
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +46,38 @@ class PhotoViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView!) {
+        // This method is called as the user scrolls
+        
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
+        UIView.animateWithDuration(0.5) { () -> Void in
+//           self.DoneButton.alpha = 0.2
+//           self.imageView.alpha = 0.5
+//           self.TabBar.alpha = 0.2
+             self.scrollView.alpha = 0.7
+        }
+        
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView!,
+        willDecelerate decelerate: Bool) {
+            // This method is called right as the user lifts their finger
+            
+            UIView.animateWithDuration(0.5) { () -> Void in
+//                self.DoneButton.alpha = 1
+//                self.imageView.alpha = 1
+//                self.TabBar.alpha = 1
+                self.scrollView.alpha = 1
+            }
+            
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
+        // This method is called when the scrollview finally stops scrolling.
+    }
+
     
     /*
     // MARK: - Navigation

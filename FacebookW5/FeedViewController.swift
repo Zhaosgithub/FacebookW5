@@ -16,7 +16,7 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var imageViewTwo: UIImageView!
     
     var fadeTransition: FadeTransition!
-    var selectedImageView: UIImageView!
+//    var selectedImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -36,7 +36,10 @@ class FeedViewController: UIViewController {
     @IBAction func onTapPhoto(sender: UITapGestureRecognizer) {
        //onTap this image will call the func to link to the photoView
         performSegueWithIdentifier("firstSegue", sender: nil)
-        selectedImageView = sender.view as! UIImageView
+        
+     
+//        selectedImageView = sender.view as! UIImageView
+        
         
         
     }
@@ -52,7 +55,11 @@ class FeedViewController: UIViewController {
         
         let destinationViewController = segue.destinationViewController as! PhotoViewController
         
-        destinationViewController.image = self.imageView.image
+//            destinationViewController.animalImage = selectedImageView.image
+        
+        destinationViewController.image = imageView.image
+        
+         
         
         // Set the modal presentation style of your destinationViewController to be custom.
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
@@ -64,7 +71,7 @@ class FeedViewController: UIViewController {
         destinationViewController.transitioningDelegate = fadeTransition
         
         // Adjust the transition duration. (seconds)
-        fadeTransition.duration = 3
+        fadeTransition.duration = 1
     
     }
     
