@@ -16,7 +16,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var TabBar: UIImageView!
     
     var image: UIImage!
-//    var contentOffset: CGFloat
+    var originalCenter: CGPoint!
     
     
 //    var animalImage: UIImage!
@@ -31,7 +31,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
      scrollView.contentSize = CGSize(width: 320, height: 800)
      scrollView.delegate = self
         
-//     contentOffset = 100
+
         // Do any additional setup after loading the view.
     }
 
@@ -53,10 +53,10 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
         UIView.animateWithDuration(0.5) { () -> Void in
-//           self.DoneButton.alpha = 0.2
-//           self.imageView.alpha = 0.5
-//           self.TabBar.alpha = 0.2
-             self.scrollView.alpha = 0.7
+           self.DoneButton.alpha = 0.2
+           self.imageView.alpha = 0.5
+           self.TabBar.alpha = 0.2
+//             self.scrollView.alpha = 0.7
         }
         
     }
@@ -64,20 +64,58 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidEndDragging(scrollView: UIScrollView!,
         willDecelerate decelerate: Bool) {
             // This method is called right as the user lifts their finger
+            if scrollView.center.y > 100 {
+                UIView.animateWithDuration(0.5) { () -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                
+                if scrollView.center.y < 100 {
+                    self.scrollView.alpha = 1
+                }
             
-            UIView.animateWithDuration(0.5) { () -> Void in
-//                self.DoneButton.alpha = 1
-//                self.imageView.alpha = 1
-//                self.TabBar.alpha = 1
-                self.scrollView.alpha = 1
             }
+          
             
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
+     
         // This method is called when the scrollview finally stops scrolling.
     }
 
+    
+    @IBAction func didPanPhoto(sender: UIPanGestureRecognizer) {
+        
+        var translation = sender.translationInView(view)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            print("Gesture began")
+            originalCenter = scrollView.center
+            
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            print("Gesture is changing")
+            scrollView.center = CGPoint(x: originalCenter.x, y: originalCenter.y+translation.y)
+
+            if translation.y > 100 {
+                dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            print("Gesture ended")
+            
+            if translation.y > 50 {
+                dismissViewControllerAnimated(true, completion: nil)
+            } else {
+                self.scrollView.alpha = 1
+                scrollView.center = originalCenter
+            }
+            
+        }
+            
+        
+    }
+    
     
     /*
     // MARK: - Navigation
